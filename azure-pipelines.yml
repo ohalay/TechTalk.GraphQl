@@ -15,9 +15,11 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+
 - task: UseDotNet@2
   inputs:
     version: '3.0.x'
+
 - task: DotNetCoreCLI@2
   displayName: Restore
   inputs:
@@ -30,10 +32,11 @@ steps:
     command: build
     projects: '**/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
+    
 - task: DotNetCoreCLI@2
+  displayName: Test
   inputs:
     command: test
     projects: '**/*Tests/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
-  displayName: Test
 
