@@ -1,4 +1,6 @@
-﻿# Graph QL .Net Server
+[![Build Status](https://dev.azure.com/olehhalay/olehhalay/_apis/build/status/ohalay.TechTalk.GraphQl?branchName=master)](https://dev.azure.com/olehhalay/olehhalay/_build/latest?definitionId=1&branchName=master)
+
+# Graph QL .Net Server
 
 The porous of this project to show possibility of Graph QL and ASP Net Core.
 
