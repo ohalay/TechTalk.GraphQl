@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29403.142
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechTalk.GraphQl", "TechTalk.GraphQl\TechTalk.GraphQl.csproj", "{DD21ADDA-EF03-4AC0-8585-00036CB6EC7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechTalk.GraphQl", "src\TechTalk.GraphQl\TechTalk.GraphQl.csproj", "{DD21ADDA-EF03-4AC0-8585-00036CB6EC7D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{46ABADC3-FC90-46F6-97F4-8ECC30F2C691}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{2568886B-E055-4BF1-B18B-7224A87F6AEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechTalk.GraphQl.Tests", "TechTalk.GraphQl.Tests\TechTalk.GraphQl.Tests.csproj", "{7F86767D-2574-4E43-A1DC-D4BAF5D26395}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +21,17 @@ Global
 		{DD21ADDA-EF03-4AC0-8585-00036CB6EC7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD21ADDA-EF03-4AC0-8585-00036CB6EC7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD21ADDA-EF03-4AC0-8585-00036CB6EC7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F86767D-2574-4E43-A1DC-D4BAF5D26395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F86767D-2574-4E43-A1DC-D4BAF5D26395}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F86767D-2574-4E43-A1DC-D4BAF5D26395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F86767D-2574-4E43-A1DC-D4BAF5D26395}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DD21ADDA-EF03-4AC0-8585-00036CB6EC7D} = {46ABADC3-FC90-46F6-97F4-8ECC30F2C691}
+		{7F86767D-2574-4E43-A1DC-D4BAF5D26395} = {2568886B-E055-4BF1-B18B-7224A87F6AEC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5DF5BBD4-85B4-498E-B8CC-15A5287A87F8}
