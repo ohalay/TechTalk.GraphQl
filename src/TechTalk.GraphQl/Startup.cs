@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Diagnostics;
 using TechTalk.GraphQl.GraphQl;
 using TechTalk.GraphQl.GraphQl.Types;
+using TechTalk.GraphQl.Service;
 using TechTalk.GraphQl.Store;
 
 namespace TechTalk.GraphQl
@@ -17,8 +18,9 @@ namespace TechTalk.GraphQl
         {
             services
                 .AddSingleton(typeof(IZombieStore<>), typeof(MemoryStore<>))
+                .AddSingleton<IZombieBreedTypeGenerator, ZombieBreedTypeGenerator>()
                 .AddSingleton<ISchema, ZombieSchema>();
-           
+
             services.AddGraphQL(options =>
                 {
                     options.EnableMetrics = true;
