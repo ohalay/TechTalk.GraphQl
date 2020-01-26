@@ -1,4 +1,5 @@
-﻿using GraphQL.Types;
+﻿using GraphQL.Server.Authorization.AspNetCore;
+using GraphQL.Types;
 using System.Collections.Generic;
 using TechTalk.GraphQl.Configuration;
 using TechTalk.GraphQl.GraphQl.Types;
@@ -12,7 +13,8 @@ namespace TechTalk.GraphQl.GraphQl
         public ZombieQuery(IZombieStore<Zombie> store)
         {
             FieldAsync<ListGraphType<ZombieType>, IReadOnlyCollection<Zombie>>($"{nameof(Zombie)}s", resolve: context => store.GetAll().AsTask());
-            Field<ListGraphType<ZombieBreedType>>($"{nameof(ZombieBreed)}s", resolve: context => Const.ZombieBreedList);
+            Field<ListGraphType<ZombieBreedType>>($"{nameof(ZombieBreed)}s", resolve: context => Const.ZombieBreedList)
+                .AuthorizeWith(Const.AuthorizedPolicy);
         }
     }
 }

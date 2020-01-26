@@ -5,6 +5,8 @@ namespace TechTalk.GraphQl.Configuration
 {
     public static class Const
     {
+        public static readonly string AuthorizedPolicy = nameof(AuthorizedPolicy);
+
         public static readonly IReadOnlyCollection<ZombieBreed> ZombieBreedList = new[]
         {
             new ZombieBreed
