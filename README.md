@@ -10,7 +10,7 @@ Just clone or download repository and have a fun.
 
 ### Prerequisites
 
-* Asp .Net Core 3.0
+* Asp .Net Core 3.1
 * Docker
 
 ## Authors
