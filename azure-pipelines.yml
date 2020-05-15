@@ -32,7 +32,15 @@ steps:
     command: build
     projects: '**/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
-    
+
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'SonarCloud'
+    organization: 'halaycampany'
+    scannerMode: 'MSBuild'
+    projectKey: 'TechTalk.GraphQl'
+    projectName: 'TechTalk GraphQl'
+
 - task: DotNetCoreCLI@2
   displayName: Test
   inputs:
@@ -40,3 +48,7 @@ steps:
     projects: '**/*Tests/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
 
+- task: SonarCloudAnalyze@1
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '500'
