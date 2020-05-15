@@ -6,6 +6,7 @@
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <LangVersion>8.0</LangVersion>
     <Nullable>enable</Nullable>
+    <ProjectGuid>{CA1484E6-2966-4218-A7E1-1F6CF83CF955}</ProjectGuid>
   </PropertyGroup>
 
   <ItemGroup>
