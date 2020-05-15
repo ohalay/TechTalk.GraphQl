@@ -33,6 +33,11 @@ steps:
     projects: '**/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
 
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '2.2.203'
+
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'SonarCloud'
@@ -40,6 +45,10 @@ steps:
     scannerMode: 'MSBuild'
     projectKey: 'TechTalk.GraphQl'
     projectName: 'TechTalk GraphQl'
+
+- task: UseDotNet@2
+  inputs:
+    version: '3.1.x'
 
 - task: DotNetCoreCLI@2
   displayName: Test
