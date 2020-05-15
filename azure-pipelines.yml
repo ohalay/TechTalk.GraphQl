@@ -24,7 +24,7 @@ steps:
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'SonarCloud'
-    organization: 'halaycampany'
+    organization: 'halay-ampany'
     scannerMode: 'MSBuild'
     projectKey: 'TechTalk.GraphQl'
     projectName: 'TechTalk GraphQl'
